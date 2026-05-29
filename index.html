@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>TeeALTA AI Dashboard</title>
     <style>
-        /* 🌌 พื้นหลังโทนน้ำเงินเข้มไล่เฉด สไตล์ Cyber Deep Blue & Silver */
+        /* 🌌 พื้นหลังโทนน้ำเงินเข้มไล่เฉด สไตล์ Cyber Deep Blue & Silver พรีเมียม */
         body { 
             background: linear-gradient(135deg, #050b14 0%, #0a192f 50%, #0f2342 100%); 
-            color: #45f3ff; 
+            color: #66fcf1; 
             font-family: 'Courier New', monospace; 
             padding: 20px;
             min-height: 100vh;
@@ -15,13 +15,13 @@
         .header { text-align: center; margin-bottom: 30px; }
         .container { display: flex; gap: 20px; flex-direction: column; }
         
-        /* 📊 ปรับกลับมาเป็นตารางกล่องสี่เหลี่ยมหน้ากระดาน (Grid View) สวยอลังการเหมือนตอนแรก */
+        /* 📊 แผงตารางกล่องสี่เหลี่ยมหน้ากระดาน (Grid View) ตามโครงสร้างเดิมที่อลังการ */
         .crypto-grid {
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* เรียงหน้ากระดานออโต้ตามความกว้างจอ */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
             gap: 15px; 
             padding: 10px 0;
-            max-width: 1200px; /* ขยายความกว้างให้โชว์แผงใหญ่เต็มตา */
+            max-width: 1200px; 
             margin: 0 auto;
             width: 100%;
             box-sizing: border-box;
@@ -31,21 +31,21 @@
             border: 2px solid #a8b2d1; /* ขอบประกายเงินเมทัลลิก */
             border-radius: 8px; 
             padding: 18px 15px; 
-            text-align: center; /* จัดตัวหนังสือและราคาให้อยู่ตรงกลางกล่อง */
+            text-align: center; 
             box-shadow: 0 0 10px rgba(168, 178, 209, 0.1);
             transition: all 0.2s ease;
         }
         .coin-card:hover {
             border-color: #45f3ff; /* ชี้แล้วไฟนีออนสีฟ้าสว่างขึ้นมา */
             box-shadow: 0 0 15px rgba(69, 243, 255, 0.4);
-            transform: translateY(-3px); /* ลอยขึ้นบนนิดหน่อยดูมีมิติ */
+            transform: translateY(-3px); 
         }
         .coin-title { font-size: 16px; font-weight: bold; margin: 0 0 10px 0; }
         .coin-price { font-size: 22px; font-weight: bold; color: #ffffff; margin: 0; }
 
-        /* จัดขนาดกล่องบอทเทรดและกล่องข่าวสารให้อยู่ในสัดส่วนที่สวยงาม */
+        /* 🤖 ปรับสัดส่วนกล่องบอทเทรด กล่องมาสคอต และกล่องข่าวสารให้สมดุลสวยงาม */
         .bot-monitor-box { background: rgba(16, 28, 48, 0.85); border: 2px solid #00ffcc; border-radius: 8px; padding: 20px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); margin: 10px auto; max-width: 600px; width: 100%; box-sizing: border-box; }
-        .news-box { background: rgba(16, 28, 48, 0.75); border: 2px solid #e2e8f0; border-radius: 8px; padding: 20px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); margin: 20px auto; max-width: 600px; width: 100%; box-sizing: border-box; }
+        .news-box { background: rgba(16, 28, 48, 0.75); border: 2px solid #ff007f; border-radius: 8px; padding: 20px; box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); margin: 20px auto; max-width: 600px; width: 100%; box-sizing: border-box; }
         .ai-mascot-container { max-width: 600px; width: 100%; box-sizing: border-box; }
         h2 { color: #ffffff; text-shadow: 0 0 10px rgba(255,255,255,0.2); text-align: center; margin-top: 25px; border-bottom: 2px solid #45f3ff; padding-bottom: 10px; }
         
@@ -56,6 +56,11 @@
         }
         .cyber-mascot-img {
             animation: cyberFloat 4s ease-in-out infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -86,7 +91,7 @@
         <div class="mascot-speech" style="color: #fff;">
             <h3 style="color: #45f3ff; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">🤖 SYSTEM ASSISTANT ONLINE</h3>
             <p style="margin: 0; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                "จัดระเบียบตารางแบบกล่องหน้ากระดานชุดใหญ่ ในธีม Deep Blue & Silver เรียบร้อยแล้วครับบอส มองเห็นราคาเหรียญทั้งหมดเรียงรายกันอย่างอลังการแน่นอนครับ!"
+                "ยินดีต้อนรับสมาชิก VIP ทุกท่านเข้าสู่ศูนย์ข้อมูลอัจฉริยะ ระบบรวมร่างโค้ดชุดเก่าและชุดใหม่เรียบร้อย ทั้งแผงราคากล่องเหลี่ยมหน้ากระดาน และกล่องมอนิเตอร์บอทเทรดรายได้ของบอสครับ!"
             </p>
         </div>
     </div>
@@ -96,10 +101,24 @@
             <h2 style="color: #00ffcc; border-bottom-color: #00ffcc; margin-bottom: 15px;">🤖 ALTA QUANT TRADING BOT</h2>
             <div style="display: flex; justify-content: space-between; margin: 10px 0; font-size: 16px;">
                 <span>🤖 Status:</span>
-                <span style="color: #00ffcc; font-weight: bold;">● STANDBY (WAITING SIGNAL)</span>
+                <span style="color: #00ffcc; font-weight: bold; animation: blink 1.5s infinite;">● STANDBY (WAITING SIGNAL)</span>
             </div>
             <div style="display: flex; justify-content: space-between; margin: 10px 0; font-size: 16px;">
                 <span>💰 Virtual Balance:</span>
                 <span style="color: #fff; font-weight: bold;">$10,000.00 USD</span>
             </div>
-            <div style="display: flex; justify-content: space-between; margin: 10px 0
+            <div style="display: flex; justify-content: space-between; margin: 10px 0; font-size: 16px;">
+                <span>📈 Total PNL (รายได้รวม):</span>
+                <span style="color: #00ff00; font-weight: bold;">+$245.50 (2.45%)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin: 10px 0; font-size: 16px;">
+                <span>⚡ Last Order:</span>
+                <span style="color: #a8b2d1;">DCA BUY SOL at $82.40</span>
+            </div>
+        </div>
+
+        <div>
+            <h2>📊 CRYPTO PRICES (ALTA Live)</h2>
+            <div class="crypto-grid">
+                <div class="coin-card" id="BTC" style="border-color: #ff9900; background: rgba(255, 153, 0, 0.05);"><p class="coin-title" style="color: #ff9900;">🪙 Bitcoin (BTC)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="ETH" style="border-
