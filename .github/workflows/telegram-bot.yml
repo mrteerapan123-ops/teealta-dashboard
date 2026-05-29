@@ -1,0 +1,27 @@
+name: Telegram Auto Bot Every Hour
+
+on:
+  schedule:
+    # ตั้งนาฬิกาปลุกให้ทำงานทุก ๆ ต้นชั่วโมง (นาทีที่ 0 ของทุกชั่วโมง)
+    - cron: '0 * * * *'
+  workflow_dispatch: # ปุ่มกดสั่งให้ทำงานทันทีด้วยมือ (เผื่อบอสอยากกดทดสอบ)
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-telegram-bot
+
+      - name: Run Telegram Bot Script
+        run: python main.py # ตรงนี้ถ้าไฟล์บอทของบอสชื่ออื่น เช่น bot.py ให้เปลี่ยนชื่อให้ตรงกันนะครับ
