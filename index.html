@@ -43,7 +43,7 @@
         .coin-title { font-size: 16px; font-weight: bold; margin: 0 0 10px 0; }
         .coin-price { font-size: 22px; font-weight: bold; color: #ffffff; margin: 0; }
 
-        /* 🤖 ปรับสัดส่วนกล่องบอทเทรด กล่องมาสคอต และกล่องข่าวสารให้สมดุลสวยงาม */
+        /* 🤖 ปรับสัดส่วนกล่องบอทเทรด กล่องมาสคอต และกล่องข่าวสารให้สมดุลสวยงามกึ่งกลางหน้าจอ */
         .bot-monitor-box { background: rgba(16, 28, 48, 0.85); border: 2px solid #00ffcc; border-radius: 8px; padding: 20px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); margin: 10px auto; max-width: 600px; width: 100%; box-sizing: border-box; }
         .news-box { background: rgba(16, 28, 48, 0.75); border: 2px solid #ff007f; border-radius: 8px; padding: 20px; box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); margin: 20px auto; max-width: 600px; width: 100%; box-sizing: border-box; }
         .ai-mascot-container { max-width: 600px; width: 100%; box-sizing: border-box; }
@@ -70,6 +70,7 @@
         <p style="color: #a8b2d1;">⏰ สถานะระบบดึงราคาด่วนบนหน้าเว็บ: <span style="color: #45f3ff; font-weight: bold;">LIVE REAL-TIME (Every 5s)</span></p>
     </div>
 
+    <!-- 🤖 กล่องตัวละคร AI คู่ใจประจำหน้าแดชบอร์ด TeeALTA -->
     <div class="ai-mascot-container" style="
         background: rgba(5, 15, 30, 0.9);
         border: 2px solid #45f3ff;
@@ -91,12 +92,13 @@
         <div class="mascot-speech" style="color: #fff;">
             <h3 style="color: #45f3ff; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">🤖 SYSTEM ASSISTANT ONLINE</h3>
             <p style="margin: 0; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                "ยินดีต้อนรับสมาชิก VIP ทุกท่านเข้าสู่ศูนย์ข้อมูลอัจฉริยะ ระบบรวมร่างโค้ดชุดเก่าและชุดใหม่เรียบร้อย ทั้งแผงราคากล่องเหลี่ยมหน้ากระดาน และกล่องมอนิเตอร์บอทเทรดรายได้ของบอสครับ!"
+                "ยินดีต้อนรับสมาชิก VIP ทุกท่านเข้าสู่ศูนย์ข้อมูลอัจฉริยะ ระบบได้รับการปรับแต่งธีม Deep Blue & Silver เรียบร้อย สแกนราคาเรียลไทม์ได้คมชัดสุดๆ ครับ!"
             </p>
         </div>
     </div>
 
     <div class="container">
+        <!-- ⚡ โซนที่ 1: กระดานบอทเทรดอัจฉริยะ (กล่องรวมรายได้และสถานะบอท) -->
         <div class="bot-monitor-box">
             <h2 style="color: #00ffcc; border-bottom-color: #00ffcc; margin-bottom: 15px;">🤖 ALTA QUANT TRADING BOT</h2>
             <div style="display: flex; justify-content: space-between; margin: 10px 0; font-size: 16px;">
@@ -117,8 +119,83 @@
             </div>
         </div>
 
+        <!-- โซนที่ 2: กระดานกล่องราคาเหรียญชุดใหญ่ 18 เหรียญ เรียงหน้ากระดานเต็มตา (Grid View) -->
         <div>
             <h2>📊 CRYPTO PRICES (ALTA Live)</h2>
             <div class="crypto-grid">
+                <!-- กลุ่ม 1: เหรียญมหาชน -->
                 <div class="coin-card" id="BTC" style="border-color: #ff9900; background: rgba(255, 153, 0, 0.05);"><p class="coin-title" style="color: #ff9900;">🪙 Bitcoin (BTC)</p><p class="coin-price">Loading...</p></div>
-                <div class="coin-card" id="ETH" style="border-
+                <div class="coin-card" id="ETH" style="border-color: #6c8ff6; background: rgba(108, 143, 246, 0.05);"><p class="coin-title" style="color: #6c8ff6;">💎 Ethereum (ETH)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="BNB" style="border-color: #f3ba2f; background: rgba(243, 186, 47, 0.05);"><p class="coin-title" style="color: #f3ba2f;">🔶 Binance (BNB)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="SOL" style="border-color: #14f195; background: rgba(20, 241, 149, 0.05);"><p class="coin-title" style="color: #14f195;">☀️ Solana (SOL)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="XRP" style="border-color: #237ebf; background: rgba(35, 126, 191, 0.05);"><p class="coin-title" style="color: #237ebf;">💧 Ripple (XRP)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="ADA" style="border-color: #0033a1; background: rgba(0, 51, 161, 0.05);"><p class="coin-title" style="color: #0033a1;">🪪 Cardano (ADA)</p><p class="coin-price">Loading...</p></div>
+
+                <!-- กลุ่ม 2: Layer 1 / Ecosystem -->
+                <div class="coin-card" id="AVAX" style="border-color: #e84142; background: rgba(232, 65, 66, 0.05);"><p class="coin-title" style="color: #e84142;">🔺 Avalanche (AVAX)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="DOT" style="border-color: #e6007a; background: rgba(230, 0, 122, 0.05);"><p class="coin-title" style="color: #e6007a;">⚫ Polkadot (DOT)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="MATICTG" style="border-color: #8247e5; background: rgba(130, 71, 229, 0.05);"><p class="coin-title" style="color: #8247e5;">🔮 Polygon (POL)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="LINK" style="border-color: #375ce6; background: rgba(55, 92, 230, 0.05);"><p class="coin-title" style="color: #375ce6;">⛓️ Chainlink (LINK)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="NEAR" style="border-color: #ffffff; background: rgba(255, 255, 255, 0.05);"><p class="coin-title" style="color: #ffffff;">🌐 NEAR Protocol</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="SUI" style="border-color: #6bc4da; background: rgba(107, 196, 218, 0.05);"><p class="coin-title" style="color: #6bc4da;">💧 Sui (SUI)</p><p class="coin-price">Loading...</p></div>
+
+                <!-- กลุ่ม 3: เหรียญมีมและกระแส -->
+                <div class="coin-card" id="DOGE" style="border-color: #c3a63c; background: rgba(195, 166, 60, 0.05);"><p class="coin-title" style="color: #c3a63c;">🐕 Dogecoin (DOGE)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="SHIB" style="border-color: #ff6500; background: rgba(255, 101, 0, 0.05);"><p class="coin-title" style="color: #ff6500;">🦊 Shiba Inu (SHIB)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="PEPE" style="border-color: #00cc00; background: rgba(0, 204, 0, 0.05);"><p class="coin-title" style="color: #00cc00;">🐸 Pepe (PEPE)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="WIF" style="border-color: #d4af37; background: rgba(212, 175, 55, 0.05);"><p class="coin-title" style="color: #d4af37;">🎩 dogwifhat (WIF)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="BONK" style="border-color: #f08d29; background: rgba(240, 141, 41, 0.05);"><p class="coin-title" style="color: #f08d29;">🍖 Bonk (BONK)</p><p class="coin-price">Loading...</p></div>
+                <div class="coin-card" id="FLOKI" style="border-color: #00bfff; background: rgba(0, 191, 255, 0.05);"><p class="coin-title" style="color: #00bfff;">🛡️ Floki (FLOKI)</p><p class="coin-price">Loading...</p></div>
+            </div>
+        </div>
+
+        <!-- โซนที่ 3: กล่องข่าวสาร -->
+        <div class="news-box">
+            <h2>🔥 AUTO NEWS SUMMARY</h2>
+            <p style='color: #a8b2d1; text-align: center;'>ℹ️ ข้อมูลส่วนนี้เราจะอัพเดทตลอดเวลาโดย AI AGEN</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: #64748b;">
+        <i>💁‍♀️ ระบบเว็บสแตนด์บายการทำงานร่วมกับ AI Agent เรียบร้อยแล้วค่ะบอส</i>
+    </div>
+
+    <!-- ⚡ ท่อดึงข้อมูลแบบ Real-time ยิงสดตรงจาก Binance ทุกๆ 5 วินาที -->
+    <script>
+        async function updateDashboardPrices() {
+            const url = 'https://api.binance.com/api/v3/ticker/price';
+            const targetSymbols = [
+                'BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT',
+                'AVAXUSDT', 'DOTUSDT', 'POLUSDT', 'LINKUSDT', 'NEARUSDT', 'SUIUSDT',
+                'DOGEUSDT', 'SHIBUSDT', 'PEPEUSDT', 'WIFUSDT', 'BONKUSDT', 'FLOKIUSDT'
+            ];
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                data.forEach(item => {
+                    if (targetSymbols.includes(item.symbol)) {
+                        let coinId = item.symbol.replace('USDT', '');
+                        if(coinId === 'POL') coinId = 'MATICTG'; 
+                        
+                        const card = document.getElementById(coinId);
+                        if (card) {
+                            const price = parseFloat(item.price);
+                            let formattedPrice = price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                            if (price < 0.1) {
+                                formattedPrice = price.toLocaleString('en-US', { minimumFractionDigits: 6, maximumFractionDigits: 6 });
+                            }
+                            card.querySelector('.coin-price').innerText = `$${formattedPrice}`;
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching prices:', error);
+            }
+        }
+        updateDashboardPrices();
+        setInterval(updateDashboardPrices, 5000); // ยิงราคาสด ๆ ทุก 5 วินาทีเรียงหน้ากระดานอลังการ
+    </script>
+</body>
+</html>
